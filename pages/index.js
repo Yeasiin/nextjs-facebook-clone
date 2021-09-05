@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { getSession } from "next-auth/client";
+// import { useSession } from "next-auth/client";
 import Header from "../components/Header";
 import NewsFeed from "../components/NewsFeed";
 import Sidebar from "../components/Sidebar";
@@ -18,7 +19,7 @@ export default function Home({ session }) {
       {/* Header */}
       <Header />
 
-      <main>
+      <main className="flex">
         {/* Sidebar */}
         <Sidebar />
         {/* NewsFeed */}

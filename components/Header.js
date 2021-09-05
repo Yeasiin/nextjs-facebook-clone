@@ -15,8 +15,10 @@ import {
   UsersIcon,
 } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
+import { signout, useSession } from "next-auth/client";
 
 function Header() {
+  const [session] = useSession();
   return (
     <div className="flex sticky top-0 z-50 bg-white items-center justify-between p-1 lg:px-5 shadow-md">
       {/* Header Left */}
@@ -39,7 +41,7 @@ function Header() {
       </div>
       {/* Header Center */}
       <div className="flex justify-center ">
-        <div className="flex">
+        <div className="flex space-x-1">
           <HeaderIcon active Icon={HomeIcon} />
           <HeaderIcon Icon={UsersIcon} />
           <HeaderIcon Icon={FlagIcon} />
@@ -51,9 +53,20 @@ function Header() {
       {/* Header Center */}
       <div className="flex items-center sm:space-x-2 justify-end">
         {/* Profile Pic */}
+        <Image
+          className="cursor-pointer rounded-full"
+          src={session.user.image}
+          width="28"
+          height="28"
+          layout="fixed"
+          onClick={signout}
+          alt=""
+        />
 
         {/* User Name */}
-        <p className="whitespace-nowrap font-semibold pr-3">Yeasin Arfat </p>
+        <p className="whitespace-nowrap font-semibold pr-3">
+          {session.user.name.split(" ")[0]}
+        </p>
 
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />

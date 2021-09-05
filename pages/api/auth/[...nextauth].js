@@ -8,11 +8,7 @@ export default NextAuth({
       clientId: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     }),
-  /*   Providers.GitHub({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
-    }), */
-    // ...add more providers here
+
   ],
 
   // A database is optional, but required to persist accounts in a database
