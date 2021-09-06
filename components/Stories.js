@@ -26,12 +26,13 @@ const stories = [
     src: "https://links.papareact.com/4u4",
     profile: "https://links.papareact.com/zvy",
   },
+
 ];
 
 function Stories() {
   return (
     <div className="flex justify-center space-x-2 mx-auto">
-      {stories.map((story) => (
+      {stories.slice(0, 5).map((story) => (
         <StoryCard key={story.name} {...story} />
       ))}
     </div>

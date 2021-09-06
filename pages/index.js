@@ -6,12 +6,13 @@ import NewsFeed from "../components/NewsFeed";
 import Sidebar from "../components/Sidebar";
 import Widgets from "../components/Widgets";
 import Login from "../components/Login";
+import { db } from "../firebaseconfig";
 
-export default function Home({ session }) {
+export default function Home({ session,posts }) {
   if (!session) return <Login />;
 
   return (
-    <div className="">
+    <div className="h-screen bg-gray-100 overflow-hidden">
       <Head>
         <title>Facebook</title>
       </Head>
@@ -23,7 +24,7 @@ export default function Home({ session }) {
         {/* Sidebar */}
         <Sidebar />
         {/* NewsFeed */}
-        <NewsFeed />
+        <NewsFeed posts={posts} />
         {/* Widgets */}
         <Widgets />
       </main>
@@ -33,9 +34,17 @@ export default function Home({ session }) {
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
+  const posts = await db.collection("posts").orderBy("timestamp", "desc").get();
+
+  const docs = posts.docs.map((post) => ({
+    id: post.id,
+    ...post.data(),
+    timestamp: null,
+  }));
   return {
     props: {
       session,
+      posts: docs,
     },
   };
 }
