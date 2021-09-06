@@ -7,8 +7,13 @@
     @apply hidden xl:inline-flex p-2 h-10 w-10 bg-gray-200 rounded-full text-gray-700 cursor-pointer hover:bg-gray-300;
   }
 
-  .inputIcon{
-    @apply flex items-center space-x-1 hover:bg-gray-100 flex-grow justify-center p-2 rounded-lg cursor-pointer
+  .inputIcon {
+    @apply flex items-center space-x-1 hover:bg-gray-100 flex-grow justify-center p-2 rounded-lg cursor-pointer;
   }
+}
 
+@media only screen and (man-width: 500px) {
+  .my-media {
+    display: none;
+  }
 }

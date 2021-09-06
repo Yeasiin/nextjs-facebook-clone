@@ -13,13 +13,15 @@ function StoryCard({ name, src, profile }) {
         alt=""
       />
 
-<p className="z-10 text-white bottom-0 left-2 font-medium" >{name}</p>
       <Image
         className="object-cover filter brightness-75 rounded-full md:rounded-xl "
         src={src}
         layout="fill"
         alt=""
       />
+      <p className="absolute opacity-0 md:opacity-100 text-white bottom-4 w-5/6 text-sm truncate font-medium">
+        {name}
+      </p>
     </div>
   );
 }

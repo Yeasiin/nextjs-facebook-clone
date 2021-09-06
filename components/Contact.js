@@ -1,21 +1,21 @@
 import Image from "next/image";
 
-function Contact({ name, src }) {
+function Contact({ picture, name }) {
   return (
-    <div className="flex items-center space-x-3 mb-2 relative hover:bg-gray-200 cursor-pointer p-2 rounded-xl" >
+    <div className="flex items-center space-x-5 mb-2 relative hover:bg-gray-200 cursor-pointer p-2 rounded-xl">
       <Image
         className="rounded-full"
         objectFit="cover"
-        width="50"
-        height="50"
-        src={src}
+        width="30"
+        height="30"
+        src={picture.thumbnail}
         alt=""
         layout="fixed"
       />
-      <p className="font-medium" >{name}</p>
-      <div className="absolute bottom-2 left-7 bg-green-400 h-3 w-3 rounded-full" ></div>
+      <p className="font-medium">{name.first + " " + name.last}</p>
+      <div className="absolute bottom-2 left-3 bg-green-300 h-[10px] w-[10px] rounded-full"></div>
     </div>
   );
 }
 
-export default Contect;
+export default Contact;
