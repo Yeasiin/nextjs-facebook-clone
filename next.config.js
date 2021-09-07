@@ -7,6 +7,7 @@ module.exports = {
       "firebasestorage.googleapis.com",
       "links.papareact.com",
       "randomuser.me",
+      "scontent.fcgp3-1.fna.fbcdn.net",
     ],
   },
 };

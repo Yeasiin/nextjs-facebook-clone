@@ -27,7 +27,7 @@ const stories = [
       "https://scontent.fcgp3-1.fna.fbcdn.net/v/t1.6435-9/179318177_1502642746734342_4971717084746924177_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=wI7Lah_Z6QcAX81dpxi&_nc_oc=AQnV6vvDygE2FRnMhJJDHfZJ1XFSl8i3gVf4qUc6CUlcX4s_5bfph8-L8kxvEh-Um2I&_nc_ht=scontent.fcgp3-1.fna&oh=8f664f2dac6c77c7221d3eec8d17bc7e&oe=615F2B8C",
   },
   {
-    name: "Bill Gates",
+    name: "Saif Hasan",
     src: "https://scontent.fcgp3-1.fna.fbcdn.net/v/t1.6435-9/123424494_2983130475250801_2104692149913402772_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=730e14&_nc_ohc=I6Zh_A3IghIAX_JMn83&_nc_ht=scontent.fcgp3-1.fna&oh=10e8213cbc87f6f18fc29470eba13b94&oe=615B6738",
     profile:
       "https://scontent.fcgp3-1.fna.fbcdn.net/v/t31.18172-8/26063425_859128957593743_2078046435534882449_o.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=tTYUSbTM24AAX9Db7Kk&_nc_ht=scontent.fcgp3-1.fna&oh=b6e64cfbd99b374d2d9c0f4a49ee265c&oe=615D6F4E",
